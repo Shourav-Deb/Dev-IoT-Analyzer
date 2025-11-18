@@ -1,0 +1,13 @@
+{
+  "name": "dev-iot-analyzer",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "start": "cd frontend && npm run dev",
+    "build": "cd frontend && npm run build"
+  },
+  "dependencies": {
+    "@tuya/tuya-connector-nodejs": "^1.0.0",
+    "node-fetch": "^2.6.7"
+  }
+}
