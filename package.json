@@ -3,9 +3,10 @@
   "private": true,
   "version": "1.0.0",
   "scripts": {
-    "start": "cd frontend && npm run dev",
-    "build": "cd frontend && npm run build"
-  },
+  "dev:all": "concurrently \"npm:start-frontend\" \"npm:start-functions\"",
+  "start-frontend": "cd frontend && npm run dev",
+  "start-functions": "netlify functions:serve"
+},
   "dependencies": {
     "@tuya/tuya-connector-nodejs": "^1.0.0",
     "node-fetch": "^2.6.7"
