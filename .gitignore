@@ -1,9 +1,0 @@
-node_modules/
-frontend/node_modules/
-.env
-dist/
-*.log
-.DS_Store
-
-# Local Netlify folder
-.netlify
