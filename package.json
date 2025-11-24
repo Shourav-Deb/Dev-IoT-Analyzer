@@ -1,0 +1,19 @@
+{
+  "name": "dev-iot-analyzer",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev:all": "concurrently \"npm run start-frontend\" \"npm run start-functions\"",
+    "start-frontend": "cd frontend && npm run dev",
+    "start-functions": "netlify dev --dir=frontend",
+    "build": "cd frontend && npm install && npm run build"
+  },
+  "dependencies": {
+    "node-fetch": "^2.6.7"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.0",
+    "netlify-cli": "^17.0.0"
+  }
+}
