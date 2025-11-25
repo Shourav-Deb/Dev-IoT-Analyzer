@@ -1,25 +1,8 @@
-# netlify.toml - Deb IoT Analyzer (BEMS)
+[dev]
+  functions = "netlify/functions"
+  port = 8888
 
 [build]
-  command   = "npm run build"
-  publish   = "frontend/dist"
+  command = "npm run build"
   functions = "netlify/functions"
-
-[build.environment]
-  NODE_VERSION = "18"
-
-[dev]
-  # run the aggregated dev script which starts frontend + functions
-  command = "npm run dev:all"
-  port = 8888
-  # when using the CLI, this will proxy functions from `functions` directory above
-
-[functions]
-  directory = "netlify/functions"
-
-# SPA rewrite so client-side routing works in production
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
-  force = true
+  publish = "frontend/dist"

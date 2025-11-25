@@ -1,4 +1,4 @@
-// recordTelemetry.js
+// recordTelemetry.js - accept POST telemetry and write to Supabase (or just accept)
 const fetch = require("node-fetch");
 const SUPA_URL = process.env.SUPABASE_URL;
 const SUPA_KEY = process.env.SUPABASE_KEY;
@@ -10,7 +10,11 @@ exports.handler = async (event) => {
     const body = JSON.parse(event.body || "{}");
     await fetch(`${SUPA_URL}/rest/v1/telemetry`, {
       method: "POST",
-      headers: { "Content-Type": "application/json", apikey: SUPA_KEY, Authorization: `Bearer ${SUPA_KEY}` },
+      headers: {
+        "Content-Type": "application/json",
+        apikey: SUPA_KEY,
+        Authorization: `Bearer ${SUPA_KEY}`,
+      },
       body: JSON.stringify(body),
     });
     return { statusCode: 200, body: JSON.stringify({ ok: true }) };

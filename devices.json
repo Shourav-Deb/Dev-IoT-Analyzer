@@ -1,0 +1,31 @@
+{
+  "default_device": "abcdef1234567890",
+  "devices": [
+    {
+      "id": "abcdef1234567890",
+      "name": "FUB Room 101 - Smart Meter",
+      "location": "FUB Building - 1st Floor",
+      "type": "energy_meter",
+      "dp_map": {
+        "power": "cur_power",
+        "voltage": "cur_voltage",
+        "current": "cur_current",
+        "energy": "add_ele",
+        "switch": "switch_1"
+      }
+    },
+    {
+      "id": "0123456789abcdef",
+      "name": "FUB Room 102 - Smart Meter",
+      "location": "FUB Building - 1st Floor",
+      "type": "energy_meter",
+      "dp_map": {
+        "power": "cur_power",
+        "voltage": "cur_voltage",
+        "current": "cur_current",
+        "energy": "add_ele",
+        "switch": "switch_1"
+      }
+    }
+  ]
+}
